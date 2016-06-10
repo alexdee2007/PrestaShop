@@ -316,7 +316,7 @@ class AdminPerformanceControllerCore extends AdminController
                         array(
                             'id' => 'group_0',
                             'value' => 0,
-                            'label' => $this->l('No')
+                            'label' => $this->l('No')initFieldsetCiphering
                         )
                     ),
                     'hint' => $this->l('Choose "No" to disable Customer Groups.')
@@ -539,7 +539,7 @@ class AdminPerformanceControllerCore extends AdminController
                             array(
                                 'id' => 'PS_CIPHER_ALGORITHM_1',
                                 'value' => 1,
-                                'label' => $this->l('Use Rijndael with mcrypt lib.').(!function_exists('mcrypt_encrypt') ? '' : $warning_mcrypt)
+                                'label' => $this->l('Use Rijndael with mcrypt lib.').(function_exists('mcrypt_encrypt') ? '' : $warning_mcrypt)
                             ),
                             array(
                                 'id' => 'PS_CIPHER_ALGORITHM_0',
